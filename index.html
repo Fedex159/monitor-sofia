@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Sofía al Paso: Envío a domicilio. Pagá como más te convenga</title>
+    <style>
+      body {
+        width: 100vw;
+        height: 100vh;
+        overflow-x: hidden;
+        padding: 0;
+        margin: 0;
+      }
+
+      .list-products {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .product {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+        margin: 0px 30px 10px 30px;
+        border-radius: 16px;
+        box-shadow: 0px 2px 9px rgb(0 0 0 / 9%);
+        width: 250px;
+        height: 300px;
+      }
+
+      .product > img {
+        max-width: 100%;
+        height: 120px;
+      }
+
+      .product-title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .product-title > h4 {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        margin-bottom: 0;
+        text-align: center;
+      }
+
+      .product-title > span {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        font-size: 12px;
+      }
+
+      .price-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin-top: 0;
+      }
+
+      .price-container > h5 {
+        color: #e30613;
+        font-weight: bold;
+        font-family: "Montserrat", sans-serif;
+        font-size: 16px;
+        margin: 0;
+      }
+
+      .price-container > span {
+        color: #808080;
+        font-weight: normal;
+        font-family: "Montserrat", sans-serif;
+        font-size: 12px;
+        margin-left: 20px;
+      }
+
+      .discount-icon {
+        position: absolute;
+        top: 0;
+        right: 20px;
+      }
+
+      .price-discount {
+        color: rgb(118, 116, 116);
+        font-weight: normal;
+        font-family: "Montserrat", sans-serif;
+        font-size: 12px;
+        text-decoration: line-through;
+        line-height: 16px;
+        margin: 0;
+        margin-top: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="list-products">
+      <div class="product">
+        <img
+          src="https://d10nbigpolte6j.cloudfront.net/media/catalog/product/p/o/pollo_relleno_con_arroz_a_la_valenciana_en_caja.jpg"
+          alt="image-POLLO RELLENO CON ARROZ A LA VALENCIANA YO CHEF"
+        />
+
+        <div class="product-title">
+          <h4>POLLO RELLENO CON ARROZ A LA VALENCIANA YO CHEF</h4>
+        </div>
+
+        <h6 class="price-discount"></h6>
+
+        <div class="price-container">
+          <h5>Bs. 59,10</h5>
+        </div>
+      </div>
+      <div class="product">
+        <img
+          src="https://d10nbigpolte6j.cloudfront.net/media/catalog/product/w/e/web-bolsa-pavo-muslos.jpg"
+          alt="image-MUSLOS DE PAVO"
+        />
+
+        <div class="product-title">
+          <h4>MUSLOS DE PAVO</h4>
+          <span>Bs. 52,05/ KGS</span>
+        </div>
+
+        <h6 class="price-discount"></h6>
+
+        <div class="price-container">
+          <h5>Bs. 41,64</h5>
+          <span>Precio estimado</span>
+        </div>
+      </div>
+      <div class="product">
+        <img
+          src="https://d10nbigpolte6j.cloudfront.net/media/catalog/product/8/0/800x800-pecetocaja_1_.jpg"
+          alt="image-PECETO DE CERDO CON SALSA AGRIDULCE DE MARACUYÁ"
+        />
+
+        <div class="product-title">
+          <h4>PECETO DE CERDO CON SALSA AGRIDULCE DE MARACUYÁ</h4>
+        </div>
+
+        <h6 class="price-discount"></h6>
+
+        <div class="price-container">
+          <h5>Bs. 34,83</h5>
+        </div>
+      </div>
+      <div class="product">
+        <img
+          src="https://d10nbigpolte6j.cloudfront.net/media/catalog/product/e/-/e-commerce-premium.jpg"
+          alt="image-HAMBURGUESA PREMIUM DE RES (1X150 GRS)"
+        />
+
+        <div class="product-title">
+          <h4>HAMBURGUESA PREMIUM DE RES (1X150 GRS)</h4>
+        </div>
+
+        <h6 class="price-discount"></h6>
+
+        <div class="price-container">
+          <h5>Bs. 10,70</h5>
+        </div>
+      </div>
+      <div class="product">
+        <img
+          src="https://d10nbigpolte6j.cloudfront.net/media/catalog/product/m/o/mockupfrutilla.jpg"
+          alt="image-MERMELADA DE FRUTILLA LA DESPENSA"
+        />
+
+        <div class="product-title">
+          <h4>MERMELADA DE FRUTILLA LA DESPENSA</h4>
+        </div>
+
+        <h6 class="price-discount"></h6>
+
+        <div class="price-container">
+          <h5>Bs. 19,20</h5>
+        </div>
+      </div>
+      <div class="product">
+        <img
+          src="https://d10nbigpolte6j.cloudfront.net/media/catalog/product/m/o/mockupmora.jpg"
+          alt="image-MERMELADA DE MORA LA DESPENSA"
+        />
+
+        <div class="product-title">
+          <h4>MERMELADA DE MORA LA DESPENSA</h4>
+        </div>
+
+        <h6 class="price-discount"></h6>
+
+        <div class="price-container">
+          <h5>Bs. 20,70</h5>
+        </div>
+      </div>
+      <div class="product">
+        <img
+          src="https://d10nbigpolte6j.cloudfront.net/media/catalog/product/m/o/mockupguayaba.jpg"
+          alt="image-MERMELADA DE GUAYABA LA DESPENSA "
+        />
+
+        <div class="product-title">
+          <h4>MERMELADA DE GUAYABA LA DESPENSA</h4>
+        </div>
+
+        <h6 class="price-discount"></h6>
+
+        <div class="price-container">
+          <h5>Bs. 18,10</h5>
+        </div>
+      </div>
+      <div class="product">
+        <img
+          src="https://d10nbigpolte6j.cloudfront.net/media/catalog/product/m/o/mousepad.png"
+          alt="image-PACK PATITAS"
+        />
+
+        <div class="product-title">
+          <h4>PACK PATITAS</h4>
+        </div>
+
+        <h6 class="price-discount"></h6>
+
+        <div class="price-container">
+          <h5>Bs. 38,80</h5>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
