@@ -21,269 +21,352 @@
         background-color: #ffffff;
       }
 
+      .bar-container {
+        margin-top: 80px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100px;
+        background-color: #d01e69;
+        /* webkit */
+        display: -webkit-flex;
+        -webkit-flex-direction: row;
+        -webkit-justify-content: center;
+        -webkit-align-items: center;
+      }
+
+      .title-bar {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        text-align: center;
+        font-size: 50px;
+        color: #fff;
+      }
+
+      .icon-bar > svg {
+        width: 70px;
+        margin-right: 20px;
+      }
+
       .list-products {
-        margin-top: 20px;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        column-gap: 20px;
-        row-gap: 20px;
         justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        /* webkit */
         display: -webkit-flex;
         -webkit-flex-direction: row;
         -webkit-flex-wrap: wrap;
         -webkit-justify-content: center;
-        -webkit-column-gap: 20px;
-        -webkit-row-gap: 20px;
+        -webkit-align-items: center;
       }
 
       .product {
-        position: relative;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        flex-direction: row;
+        justify-content: space-between;
         align-items: center;
-        padding: 5px;
-        border-radius: 16px;
-        box-shadow: 0px 2px 9px rgb(0 0 0 / 9%);
-        width: 400px;
-        height: 400px;
+        flex-basis: 30%;
+        position: relative;
+        padding: 10px;
+        box-sizing: border-box;
+        height: 300px;
+        margin: 60px 30px 0px 30px;
         /* webkit */
         display: -webkit-flex;
-        -webkit-flex-direction: column;
-        -webkit-justify-content: center;
+        -webkit-flex-direction: row;
+        -webkit-justify-content: space-between;
         -webkit-align-items: center;
-        -webkit-box-shadow: 0px 2px 9px rgb(0 0 0 / 9%);
+        -webkit-flex-basis: 30%;
       }
 
       .product > img {
-        max-width: 100%;
-        height: 200px;
+        width: 300px;
+        height: 300px;
+        object-fit: contain;
       }
 
-      .product-title {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        /* webkit */
-        display: -webkit-flex;
-        -webkit-flex-direction: column;
-        -webkit-justify-content: center;
-        -webkit-align-items: center;
-      }
-
-      .product-title > h4 {
+      .title {
         font-family: "Montserrat", sans-serif;
-        font-weight: 500;
-        margin-bottom: 0;
-        text-align: center;
-      }
-
-      .product-title > span {
-        font-family: "Montserrat", sans-serif;
-        font-weight: 400;
-        font-size: 12px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        text-align: end;
+        font-size: 25px;
+        color: #474747;
+        max-width: 230px;
       }
 
       .price-container {
         display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        margin-top: 30px;
+        overflow: hidden;
+        /* webkit */
+        display: -webkit-flex;
+        -webkit-justify-content: flex-end;
+        -webkit-align-items: flex-end;
+      }
+
+      .price-container > h5 {
+        background-color: red;
+        color: #ffffff;
+        font-weight: bold;
+        font-family: "Montserrat", sans-serif;
+        font-size: 35px;
+        margin: 0;
+        padding: 0 5px;
+        width: max-content;
+        height: 45px;
+        z-index: 2;
+      }
+
+      .box-price {
+        position: relative;
+        display: flex;
         justify-content: center;
         align-items: center;
-        column-gap: 20px;
-        row-gap: 20px;
-        margin-top: 0;
+        width: 45px;
+        height: 45px;
+        background-color: red;
+        transform: rotate(45deg);
+        left: 23px;
+        z-index: 1;
         /* webkit */
         display: -webkit-flex;
         -webkit-justify-content: center;
         -webkit-align-items: center;
-        -webkit-column-gap: 20px;
-        -webkit-row-gap: 20px;
+        -webkit-transform: rotate(45deg);
       }
 
-      .price-container > h5 {
-        color: #e30613;
-        font-weight: bold;
-        font-family: "Montserrat", sans-serif;
-        font-size: 16px;
-        margin: 0;
-      }
-
-      .price-container > span {
-        color: #808080;
-        font-weight: normal;
-        font-family: "Montserrat", sans-serif;
-        font-size: 12px;
-        margin-left: 20px;
+      .box-price > div {
+        width: 14px;
+        height: 14px;
+        background-color: #ffffff;
+        border-radius: 50%;
+        margin-top: 10px;
+        margin-right: 10px;
       }
 
       .discount-icon {
         position: absolute;
         top: 0;
-        right: 20px;
-      }
-
-      .price-discount {
-        color: rgb(118, 116, 116);
-        font-weight: normal;
-        font-family: "Montserrat", sans-serif;
-        font-size: 12px;
-        text-decoration: line-through;
-        line-height: 16px;
-        margin: 0;
-        margin-top: 30px;
+        right: 10px;
       }
     </style>
   </head>
   <body>
+    <div class="bar-container">
+      <div class="icon-bar">
+        <?xml version="1.0" encoding="utf-8"?>
+        <!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+        <svg
+          version="1.1"
+          id="Layer_1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          x="0px"
+          y="0px"
+          viewBox="0 0 64 64"
+          style="enable-background: new 0 0 64 64"
+          xml:space="preserve"
+        >
+          <style type="text/css">
+            .st0 {
+              fill: #dd0613;
+            }
+            .st1 {
+              fill: #d01e69;
+            }
+            .st2 {
+              fill: #5c1217;
+            }
+            .st3 {
+              clip-path: url(#SVGID_2_);
+              fill: #5c1217;
+            }
+            .st4 {
+              fill: none;
+            }
+            .st5 {
+              fill: #ffffff;
+            }
+            .st6 {
+              fill: #2b649a;
+            }
+            .st7 {
+              fill: #b0425d;
+            }
+            .st8 {
+              fill: #2d7043;
+            }
+            .st9 {
+              fill: #e48967;
+            }
+            .st10 {
+              fill: #861455;
+            }
+            .st11 {
+              fill: #da9938;
+            }
+            .st12 {
+              fill: #e1541b;
+            }
+            .st13 {
+              fill: #f2ce41;
+            }
+            .st14 {
+              fill: #af803a;
+            }
+            .st15 {
+              fill: #89b8a9;
+            }
+            .st16 {
+              display: none;
+            }
+            .st17 {
+              display: inline;
+              fill: #ffffff;
+            }
+            .st18 {
+              fill: #8c262e;
+            }
+          </style>
+          <rect class="st1" width="64" height="64" />
+          <path
+            class="st5"
+            d="M55.8,24.2c-0.1-0.5-0.6-0.8-1-0.7c-1.3,0.3-2.2,0.7-2.9,1.1c-1.6-0.8-2.7-0.7-3.3-0.5
+	c-0.9-1.7-2.3-3.5-4.6-4.8c-5-2.9-12.6-2.6-22.4,0.9c0,0,0,0-0.1,0c-1.2-1.3-3-2.6-5.6-3.1c-0.3-0.1-0.5,0-0.7,0.2
+	c-0.2,0.2-0.3,0.5-0.3,0.7c0,0.1,0.2,2.5,0.7,4.8c-0.2,0.1-0.3,0.2-0.5,0.4c-0.8,0.6-2.3,1.9-5.5,1.9c-0.4,0-0.7,0.3-0.8,0.6
+	c-0.1,0.5-1.3,5,1.5,6c1.1,0.4,1.8,0.9,2.8,1.6c0.9,0.6,1.9,1.4,3.7,2.4c0.4,0.3,0.9,0.5,1.3,0.8c1.1,0.7,2.3,1.4,3.7,2.1
+	c0.6,2.2,1.1,4.5,0.6,7.5c-0.1,0.4,0.2,0.9,0.6,1c0.3,0.1,1.4,0.4,2.5,0.4c0.4,0,0.8,0,1.2-0.2c1.3-0.4,1.1-1.7,0.9-2.3
+	c-0.1-0.6-0.2-1.2,0-1.9c0.2-0.8,0.5-1.2,0.9-1.6c0.2-0.3,0.4-0.6,0.6-1c1.4,0.1,2.8,0.2,4.3,0.2c1.1,0,2.3,0,3.5-0.1
+	c0.3,0,0.5,0,0.7-0.1c0.2,0.9,0.4,1.7,0.3,2.3c-0.1,2.2-1,3.6-1,3.6c-0.2,0.2-0.2,0.5-0.1,0.8c0.1,0.3,0.3,0.5,0.6,0.5
+	c0.6,0.1,1.6,0.3,2.6,0.3c0.9,0,1.8-0.2,2.3-0.7c1.2-1.2,0.7-3.1,0.2-4.8c-0.3-0.9,0.2-1.7,0.4-2.1c6.5-2.4,7.9-8.5,7.1-13
+	c-0.1-0.6-0.3-1.3-0.5-2.1c0.3,0,0.7,0,1.4,0.2c-0.2,0.3-0.2,0.5-0.3,0.8c-0.2,1,0.2,2.1,0.9,2.6c0.4,0.3,0.8,0.4,1.2,0.4
+	c0.3,0,0.6-0.1,0.9-0.3c1.1-0.6,1.3-1.3,1.3-1.9c0-0.7-0.4-1.3-1.1-1.9c0.5-0.2,1-0.4,1.6-0.5C55.6,25.1,55.9,24.7,55.8,24.2z
+	 M41.9,39.2c-0.1,0-0.2,0.1-0.2,0.1c-0.1,0.1-0.3,0.2-0.3,0.4c-0.4,0.5-1.2,2-0.7,3.7c0.4,1.4,0.7,2.6,0.2,3.1
+	c-0.2,0.2-1.1,0.2-2.1,0.1c0.3-0.8,0.7-1.9,0.7-3.3c0.1-2.7-1.9-7.3-2-7.5c-0.2-0.4-0.7-0.6-1.2-0.4c-0.4,0.2-0.6,0.7-0.4,1.2
+	c0.2,0.5,0.6,1.5,1,2.6c-0.1,0-0.2,0-0.3,0c-2.8,0.2-5.2,0.1-7.4-0.1c0-0.6-0.2-1.1-0.4-1.6c-0.2-0.5-0.3-0.9-0.2-1.5
+	c0.1-0.5-0.1-1-0.6-1.1c-0.5-0.1-1,0.1-1.1,0.6c-0.3,1.2,0,2,0.2,2.6c0.2,0.5,0.3,0.8,0.2,1.3c-0.1,0.6-0.3,0.8-0.6,1.3
+	c-0.4,0.5-0.8,1.1-1.1,2.1c-0.3,1.1-0.2,2.1,0,2.7c0,0.1,0,0.2,0.1,0.4c-0.4,0.1-1.1,0-1.6-0.1c0.4-3-0.1-5.4-0.7-7.6
+	c0-0.3-0.2-0.7-0.5-0.8c-1.5-0.6-2.7-1.4-3.9-2.2c-0.5-0.3-0.9-0.6-1.4-0.8c-1.7-1-2.7-1.7-3.6-2.3c-1.1-0.8-1.9-1.3-3.2-1.8
+	c-0.9-0.3-0.8-2.2-0.6-3.4c3.2-0.2,4.9-1.5,5.8-2.2c0.1,0.2,0.1,0.3,0.2,0.5c0.1,0.4,0.5,0.6,0.8,0.6c0.1,0,0.2,0,0.3-0.1
+	c0.5-0.2,0.7-0.7,0.5-1.1c-0.6-1.6-0.9-4-1.1-5.4c4,1.3,5.1,5,5.2,5.1c0.1,0.5,0.6,0.7,1.1,0.6c0.5-0.1,0.7-0.6,0.6-1.1
+	c0-0.1-0.3-1-1-2.1c9.1-3.2,16-3.5,20.5-0.9c3.6,2.1,4.7,5.5,5,7.3C48.3,29.5,49.2,36.6,41.9,39.2z M52.5,28c0,0-0.1,0.1-0.2,0
+	c-0.2-0.1-0.3-0.5-0.3-0.8c0-0.1,0.1-0.2,0.1-0.3c0.6,0.4,0.7,0.8,0.7,0.8C52.9,27.7,52.8,27.8,52.5,28z"
+          />
+        </svg>
+      </div>
+      <h2 class="title-bar">CERDO</h2>
+    </div>
+
     <div class="list-products">
       <div class="product">
         <img
-          src="https://d10nbigpolte6j.cloudfront.net/media/catalog/product/p/o/pollo_relleno_con_arroz_a_la_valenciana_en_caja.jpg"
-          alt="image-POLLO RELLENO CON ARROZ A LA VALENCIANA YO CHEF"
+          src="https://d10nbigpolte6j.cloudfront.net/media/catalog/product/l/o/lomo_de_cerdo_congelado_en_bandeja.jpg"
+          alt="image-LOMO EN BANDEJA"
         />
+        <div class="items-container">
+          <h4 class="title">LOMO EN BANDEJA</h4>
 
-        <div class="product-title">
-          <h4>POLLO RELLENO CON ARROZ A LA VALENCIANA YO CHEF</h4>
-        </div>
+          <div class="price-container">
+            <div class="box-price">
+              <div></div>
+            </div>
 
-        <h6 class="price-discount"></h6>
-
-        <div class="price-container">
-          <h5>Bs. 59,10</h5>
+            <h5>Bs. 23,22</h5>
+          </div>
         </div>
       </div>
       <div class="product">
         <img
-          src="https://d10nbigpolte6j.cloudfront.net/media/catalog/product/w/e/web-bolsa-pavo-muslos.jpg"
-          alt="image-MUSLOS DE PAVO"
+          src="https://d10nbigpolte6j.cloudfront.net/media/catalog/product/p/u/punta_de_matambre_de_cerdo_congelado_en_bandeja.jpg"
+          alt="image-PUNTA DE MATAMBRE EN BANDEJA"
         />
+        <div class="items-container">
+          <h4 class="title">PUNTA DE MATAMBRE EN BANDEJA</h4>
 
-        <div class="product-title">
-          <h4>MUSLOS DE PAVO</h4>
-          <span>Bs. 52,05/ KGS</span>
-        </div>
+          <div class="price-container">
+            <div class="box-price">
+              <div></div>
+            </div>
 
-        <h6 class="price-discount"></h6>
-
-        <div class="price-container">
-          <h5>Bs. 41,64</h5>
-          <span>Precio estimado</span>
+            <h5>Bs. 17,98</h5>
+          </div>
         </div>
       </div>
       <div class="product">
         <img
-          src="https://d10nbigpolte6j.cloudfront.net/media/catalog/product/8/0/800x800-pecetocaja_1_.jpg"
-          alt="image-PECETO DE CERDO CON SALSA AGRIDULCE DE MARACUYÁ"
+          src="https://d10nbigpolte6j.cloudfront.net/media/catalog/product/e/-/e-commerce_carne_molida.png"
+          alt="image-CARNE MOLIDA DE CERDO"
         />
+        <div class="items-container">
+          <h4 class="title">CARNE MOLIDA DE CERDO</h4>
 
-        <div class="product-title">
-          <h4>PECETO DE CERDO CON SALSA AGRIDULCE DE MARACUYÁ</h4>
-        </div>
+          <div class="price-container">
+            <div class="box-price">
+              <div></div>
+            </div>
 
-        <h6 class="price-discount"></h6>
-
-        <div class="price-container">
-          <h5>Bs. 34,83</h5>
+            <h5>Bs. 16,66</h5>
+          </div>
         </div>
       </div>
       <div class="product">
         <img
-          src="https://d10nbigpolte6j.cloudfront.net/media/catalog/product/e/-/e-commerce-premium.jpg"
-          alt="image-HAMBURGUESA PREMIUM DE RES (1X150 GRS)"
+          src="https://d10nbigpolte6j.cloudfront.net/media/catalog/product/c/o/costilla_peque_a_con_cuero_refrig.jpg"
+          alt="image-COSTILLA DE CERDO CON CUERO A GRANEL REFIGERADO"
         />
+        <div class="items-container">
+          <h4 class="title">COSTILLA DE CERDO CON CUERO A GRANEL REFIGERADO</h4>
 
-        <div class="product-title">
-          <h4>HAMBURGUESA PREMIUM DE RES (1X150 GRS)</h4>
-        </div>
+          <div class="price-container">
+            <div class="box-price">
+              <div></div>
+            </div>
 
-        <h6 class="price-discount"></h6>
-
-        <div class="price-container">
-          <h5>Bs. 10,70</h5>
+            <h5>Bs. 213,01</h5>
+          </div>
         </div>
       </div>
       <div class="product">
         <img
-          src="https://d10nbigpolte6j.cloudfront.net/media/catalog/product/m/o/mockupfrutilla.jpg"
-          alt="image-MERMELADA DE FRUTILLA LA DESPENSA"
+          src="https://d10nbigpolte6j.cloudfront.net/media/catalog/product/e/n/entra_a-de-cerdo_800x800.jpg"
+          alt="image-ENTRAÑA DE CERDO CONGELADA AL VACÍO"
         />
+        <div class="items-container">
+          <h4 class="title">ENTRAÑA DE CERDO CONGELADA AL VACÍO</h4>
 
-        <div class="product-title">
-          <h4>MERMELADA DE FRUTILLA LA DESPENSA</h4>
-        </div>
+          <div class="price-container">
+            <div class="box-price">
+              <div></div>
+            </div>
 
-        <h6 class="price-discount"></h6>
-
-        <div class="price-container">
-          <h5>Bs. 19,20</h5>
+            <h5>Bs. 32,77</h5>
+          </div>
         </div>
       </div>
       <div class="product">
         <img
-          src="https://d10nbigpolte6j.cloudfront.net/media/catalog/product/m/o/mockupmora.jpg"
-          alt="image-MERMELADA DE MORA LA DESPENSA"
+          src="https://d10nbigpolte6j.cloudfront.net/media/catalog/product/c/1/c12_1.jpg"
+          alt="image-BIFE EN BANDEJA"
         />
+        <div class="items-container">
+          <h4 class="title">BIFE EN BANDEJA</h4>
 
-        <div class="product-title">
-          <h4>MERMELADA DE MORA LA DESPENSA</h4>
+          <div class="price-container">
+            <div class="box-price">
+              <div></div>
+            </div>
+
+            <h5>Bs. 23,22</h5>
+          </div>
         </div>
-
-        <h6 class="price-discount"></h6>
-
-        <div class="price-container">
-          <h5>Bs. 20,70</h5>
-        </div>
-      </div>
-      <div class="product">
-        <img
-          src="https://d10nbigpolte6j.cloudfront.net/media/catalog/product/m/o/mockupguayaba.jpg"
-          alt="image-MERMELADA DE GUAYABA LA DESPENSA "
-        />
-
-        <div class="product-title">
-          <h4>MERMELADA DE GUAYABA LA DESPENSA</h4>
-        </div>
-
-        <h6 class="price-discount"></h6>
-
-        <div class="price-container">
-          <h5>Bs. 18,10</h5>
-        </div>
-      </div>
-      <div class="product">
-        <img
-          src="https://d10nbigpolte6j.cloudfront.net/media/catalog/product/p/a/pate_de_higado_de_pollo_de_100_grs._1.jpg"
-          alt="image-PATÉ DE HÍGADO DE POLLO DE 100 GRS"
-        />
-
-        <div class="product-title">
-          <h4>PATÉ DE HÍGADO DE POLLO DE 100 GRS</h4>
-        </div>
-
-        <h6 class="price-discount">Bs. 6,80</h6>
-
-        <div class="price-container">
-          <h5>Bs. 6,12</h5>
-        </div>
-
-        <svg
-          class="discount-icon"
-          width="32"
-          height="48"
-          viewBox="0 0 32 48"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M30.1176 0H1.88235C0.842353 0 0 5.14023e-05 0 5.14023e-05V46.9326C0 47.3209 0.185412 47.6771 0.485647 47.8659C0.783059 48.0537 1.15012 48.0441 1.44094 47.8382L16 37.5237L30.56 47.8371C30.7125 47.9449 30.8847 47.9993 31.0588 47.9993C31.216 47.9993 31.3732 47.9545 31.5144 47.8659C31.8146 47.6771 32 47.3209 32 46.9326V5.14023e-05C32 5.14023e-05 31.1576 0 30.1176 0Z"
-            fill="#E30613"
-          />
-          <path
-            d="M11.325 28.1396H13.016L20.787 12.5596H19.096L11.325 28.1396ZM11.287 19.6846C13.016 19.6846 14.536 18.6016 14.536 16.5686C14.536 14.5356 13.016 13.4526 11.287 13.4526C9.539 13.4526 8 14.5356 8 16.5686C8 18.6016 9.539 19.6846 11.287 19.6846ZM11.287 18.0696C10.261 18.0696 9.767 17.3666 9.767 16.5686C9.767 15.7706 10.261 15.0676 11.287 15.0676C12.294 15.0676 12.769 15.7706 12.769 16.5686C12.769 17.3666 12.294 18.0696 11.287 18.0696ZM20.806 27.2466C22.535 27.2466 24.055 26.1636 24.055 24.1306C24.055 22.0976 22.535 21.0146 20.806 21.0146C19.077 21.0146 17.538 22.0976 17.538 24.1306C17.538 26.1636 19.077 27.2466 20.806 27.2466ZM20.806 25.6316C19.78 25.6316 19.286 24.9286 19.286 24.1306C19.286 23.3326 19.78 22.6296 20.806 22.6296C21.813 22.6296 22.307 23.3326 22.307 24.1306C22.307 24.9286 21.813 25.6316 20.806 25.6316Z"
-            fill="white"
-          />
-        </svg>
       </div>
     </div>
   </body>
