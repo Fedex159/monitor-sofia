@@ -177,8 +177,14 @@
       .pages {
         display: flex;
         width: max-content;
-        animation: slide 40s linear infinite;
-        -webkit-animation: slide 40s linear infinite;
+        animation-name: slide;
+        animation-duration: 40s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        -webkit-animation-name: slide;
+        -webkit-animation-duration: 40s;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;        
       }
 
       .page {
